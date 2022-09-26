@@ -6,16 +6,17 @@
     max-width: 1440px;
     width: 100%;
     height: 300px;
-    background-color: beige;
+    background-color: $beige;
     overflow-y: scroll;
     overflow-x: hidden;
     flex-wrap: wrap;
     display: flex;
+    border-radius: 3px;
 }
 
 .card {
     width: 200px;
-    background-color: bisque;
+    background-color: $white;
     border-radius: 8px;
     box-shadow: 2px 5px 5px 2px rgba(34, 60, 80, 0.2);
     padding: 10px 15px;
@@ -64,7 +65,7 @@
     position: absolute;
     z-index: 10;
     height: 350px;
-    max-width: 1173px;
+    max-width: 1000px;
     margin-top: -65px;
     margin-left: -2px;
     .card__actions button {
