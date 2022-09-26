@@ -1,3 +1,3 @@
 # Notes
-Тестовое задание
+Тестовое задание.
 Демо:  https://victoria396.github.io/Notes/
