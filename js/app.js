@@ -1,6 +1,7 @@
 const cards = document.querySelector(".cards");
 const buttonAdd = document.querySelector(".add-card");
 
+// функция newCard создает карточку
 function newCard (title, text) {
     const cardEl = document.createElement("div");
     cardEl.innerHTML = `
@@ -32,6 +33,7 @@ function newCard (title, text) {
             </div>
     `;
 
+    // эта часть мне не нравится, не придумала как правильно делегировать события
     const editBtn = cardEl.querySelector(".add");
     const deleteBtn = cardEl.querySelector(".delete");
     const titleEl = cardEl.querySelector('.card__title');
@@ -43,6 +45,8 @@ function newCard (title, text) {
     const card = cardEl.querySelector('.card');
     const plus = cardEl.querySelector('.fa-circle-plus')
 
+
+    // при клике на иконку карандаша, открывается заметка
     editBtn.addEventListener('click', event => {
         card.classList.toggle("card-active");
         pen.classList.toggle("hidden");
@@ -54,11 +58,12 @@ function newCard (title, text) {
         plus.classList.toggle('hidden');
     });
 
-
+    // при клике на мусорное ведро, удаляется карточка. Модального окна нет
     deleteBtn.addEventListener('click', event => {
         cardEl.remove();
     });
 
+    // при закрытии сохраняются прописанные задачи
     titleInputEl.addEventListener('input', event => {
         titleEl.innerText = event.target.value;
     });
@@ -71,6 +76,7 @@ function newCard (title, text) {
     const cardList = cardEl.querySelector('.card__list');
     const cardContent = cardEl.querySelector('.card__content')
 
+    // функция добавляет новую задачу
     function newTodo(text) {
         const itemTodo = document.createElement("label");
         itemTodo.innerHTML = `
@@ -92,11 +98,13 @@ function newCard (title, text) {
         itemTodo.classList.add("card__item-input")
         cardList.appendChild(itemTodo);
 
+        // задачи можно удалять
         const deleteItem = itemTodo.querySelector(".fa-circle-minus")
         deleteItem.addEventListener('click', event => {
             deleteItem.parentElement.parentElement.remove();
         });
 
+        // при клике на галочку все изменения сохраняются. Нет модального окна
         editBtn.addEventListener('click', event => {
             itemTodo.classList.toggle("hidden");
             itemTodoText.classList.toggle("hidden");
@@ -105,6 +113,7 @@ function newCard (title, text) {
 
     }
 
+    // вызов функции по добавлению новой задачи в активной карточке 
     addTodo.addEventListener('click', event => {
         newTodo("Задача");
     });
@@ -112,6 +121,7 @@ function newCard (title, text) {
     return cardEl;
 }
 
+// вызов функции(добавить карточку) при клике на плюс рядом с заголовком "Заметки"
 buttonAdd.addEventListener('click', event => {
     const el = newCard("Заголовок", "Задача");
     cards.appendChild(el);
