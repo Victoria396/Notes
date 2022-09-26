@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+.add-card {
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 5px 10px;
+}

@@ -1,0 +1,93 @@
+.hidden {
+    display: none !important;
+}
+
+.cards {
+    max-width: 1440px;
+    width: 100%;
+    height: 300px;
+    background-color: beige;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.card {
+    width: 200px;
+    background-color: bisque;
+    border-radius: 8px;
+    box-shadow: 2px 5px 5px 2px rgba(34, 60, 80, 0.2);
+    padding: 10px 15px;
+    margin: 18px 15px;
+    height: 160px;
+}
+
+.card__actions {
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    margin-right: 17px;
+    margin-left: auto;
+}
+
+.card__content {
+    margin-top: -25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 140px;
+    h2 {
+        font-size: 18px;
+    }
+}
+
+.card__item {
+    margin-top: 13px;
+}
+
+.card__item-input {
+    display: flex;
+    align-items: center;
+}
+
+    .card__list {
+        .card__item-input {
+            input[type=checkbox]:checked ~ .item-done {
+                text-decoration: line-through;
+            }
+        }
+    }
+
+.card-active {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 350px;
+    max-width: 1173px;
+    margin-top: -65px;
+    margin-left: -2px;
+    .card__actions button {
+        font-size: 22px;
+        margin: 14px -12px;
+    }
+    .card__content {
+        margin: -93px 0 0 30px;
+        overflow: inherit;
+    }
+    .card__list {
+        height: 185px;
+        overflow-y: scroll;
+        width: 100%;
+        max-width: 700px;
+        .card__item-input {
+            input[type=checkbox]:checked ~ .item-done {
+                text-decoration: line-through;
+            }
+        }
+    }
+    .fa-circle-plus {
+        margin-top: 10px;
+        font-size: 35px;
+    }
+}

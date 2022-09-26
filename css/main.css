@@ -1,0 +1,197 @@
+h1, h2, h3 {
+  font-family: "Noto Serif", serif !important;
+  font-size: 34px;
+}
+
+p, textarea {
+  font-family: "Domine", serif;
+  font-size: 18px;
+  width: 165px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  padding: 20px 40px;
+}
+
+button {
+  cursor: pointer;
+  color: rgb(0, 153, 255);
+  background-color: transparent;
+  border: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+
+.add-card {
+  border: 1px solid;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 5px 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.cards {
+  max-width: 1440px;
+  width: 100%;
+  height: 300px;
+  background-color: beige;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  width: 200px;
+  background-color: bisque;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 5px 5px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 2px 5px 5px 2px rgba(34, 60, 80, 0.2);
+  padding: 10px 15px;
+  margin: 18px 15px;
+  height: 160px;
+}
+
+.card__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10px;
+  margin-right: 17px;
+  margin-left: auto;
+}
+
+.card__content {
+  margin-top: -25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 140px;
+}
+.card__content h2 {
+  font-size: 18px;
+}
+
+.card__item {
+  margin-top: 13px;
+}
+
+.card__item-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__list .card__item-input input[type=checkbox]:checked ~ .item-done {
+  text-decoration: line-through;
+}
+
+.card-active {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  height: 350px;
+  max-width: 1173px;
+  margin-top: -65px;
+  margin-left: -2px;
+}
+.card-active .card__actions button {
+  font-size: 22px;
+  margin: 14px -12px;
+}
+.card-active .card__content {
+  margin: -93px 0 0 30px;
+  overflow: inherit;
+}
+.card-active .card__list {
+  height: 185px;
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 700px;
+}
+.card-active .card__list .card__item-input input[type=checkbox]:checked ~ .item-done {
+  text-decoration: line-through;
+}
+.card-active .fa-circle-plus {
+  margin-top: 10px;
+  font-size: 35px;
+}
+
+footer h3 {
+  margin-top: 100px;
+}
